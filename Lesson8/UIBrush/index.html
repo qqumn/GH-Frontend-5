@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lesson8. UIBrush</title>
+	<link rel="stylesheet" href="styles/styles.css"> <!-- основные стиля должны быть в самом низу -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+<body>
+<div class="wrapper"> <!-- зачем тебе тут просто враппер? -->
+	<header> <!-- нету враппера для хедера, у меня на большом мониторе он поплыл -->
+		<div class="header-nav">
+			<h1><a href="#">UIBrush</a></h1>
+			<nav class="header-anchors">
+				<ul>
+					<li><a href="#">home</a></li> <!-- аналогично, с большой буквы пиши слова -->
+					<li><a href="#">about us</a></li>
+					<li><a href="#">portfolio</a></li>
+					<li><a href="#">services</a></li>
+					<li><a href="#">contact us</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<section class="hero"> <!-- в данном случае хедер должен быть в хиро -->
+		<div class="section-wrapper">
+			<h2>THE ULTIMATE COLLECTION OF FREE PSD TEMPLATES!!</h2>
+			<a href="#" class="download-button">download</a>
+		</div>
+	</section>
+	<section class="about-us">
+		<div class="section-wrapper">
+			<h2>about us</h2> <!-- вешай сюда какой-то класс для лучшего контроля -->
+			<p class="section-summary">Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+			<article>
+				<h3>Lorem ipsum dolor sit amet adipisicing elit.</h3>
+				<img src="images/about_carpic.png" alt="Car picture">
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				<a href="#" class="start-using">get started</a> <!-- не совсем классный класс -->
+			</article>
+		</div>
+	</section>
+	<section class="portfolio">
+		<div class="section-wrapper">
+			<h2>portfolio</h2>
+			<p class="section-summary">Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p> <!-- что за summary? это просто дескрипшин -->
+			<ul>
+				<li>
+					<div class="project-block"> <!-- тут аналогичная ситуация как и на портфолио -->
+						<img src="images/project-1.png" alt="Project1">
+						<h4><a href="#">project one</a></h4>
+						<span href="#">web design</span>
+					</div>
+					<div class="overlay-block">
+						<a href="#">read more</a>
+					</div>
+				</li>
+				<li>
+					<div class="project-block"> <!-- ты мог бы без этого блока обойтись, он у тебя исполняет роль li сейчас -->
+						<img src="images/project-2.png" alt="Project2">
+						<h4><a href="#">project two</a></h4>
+						<span href="#">Logo</span> <!-- и сюда нужен класс, непонятно то это -->
+					</div>
+					<div class="overlay-block">
+						<a href="#">read more</a>
+					</div>
+				</li>
+				<li>
+					<div class="project-block">
+						<img src="images/project-3.png" alt="Project3">
+						<h4><a href="#">project tree</a></h4>
+						<span href="#">photo</span>
+					</div>
+					<div class="overlay-block">
+						<a href="#">read more</a>
+					</div>
+				</li>
+				<li>
+					<div class="project-block">
+						<img src="images/project-4.png" alt="Project4">
+						<h4><a href="#">project one</a></h4>
+						<span href="#">web design</span>
+					</div>
+					<div class="overlay-block">
+						<a href="#">read more</a>
+					</div>
+				</li>
+				<li>
+					<div class="project-block">
+						<img src="images/project-5.png" alt="Project5">
+						<h4><a href="#">project one</a></h4>
+						<span href="#">web design</span>
+					</div>
+					<div class="overlay-block">
+						<a href="#">read more</a>
+					</div>
+				</li>
+				<li>
+					<div class="project-block">
+						<img src="images/project-6.png" alt="Project6">
+						<h4><a href="#">project one</a></h4>
+						<span href="#">web design</span>
+					</div>
+					<div class="overlay-block">
+						<a href="#">read more</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="services">
+		<div class="section-wrapper">
+			<h2>services</h2>
+			<p class="section-summary">Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+			<ul>
+				<li> <!-- проверь анимации, у тебя не все элементы в блоке плавно анимируются -->
+					<span class="fa fa-camera"></span>
+					<h3>photography</h3>
+					<p>Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					<a href="#">read more</a>
+				</li>
+				<li>
+					<span class="fa fa-paint-brush"></span>
+					<h3>painting</h3>
+					<p>Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					<a href="#">read more</a>
+				</li>
+				<li>
+					<span class="fa fa-scissors"></span>
+					<h3>video editing</h3> <!-- то, что у тебя стоит uppercase, не значит что не нужно писать начало строки с большой буквы) -->
+					<p>Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					<a href="#">read more</a>
+				</li>
+				<li>
+					<span class="fa fa-html5"></span>
+					<h3>web design</h3>
+					<p>Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					<a href="#">read more</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="contact-us">
+		<div class="section-wrapper">
+			<h2>contact us</h2>
+			<p class="section-summary">Lorem ipsum dolor sit amet tetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+			<div class="contact-info">
+				<h3>Contact Info</h3>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero accumsan et.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, </p>
+				<dl> <!-- ну тут костыль в плане переносов слов) -->
+					<dt>Address</dt>
+					<dd>1931 Dawson Drive, 15th Avenue, Little Rock, AR 72211</dd>
+				</dl>
+			</div>
+			<form action="#" method="post">
+				<input id="input-name" type="text" placeholder="Name...">
+				<input id="input-email" type="email" placeholder="Email...">
+				<input id="input-subject" type="text" placeholder="Subject...">
+				<textarea name="textarea" id="textarea" cols="30" rows="10" placeholder="Message..."></textarea>
+				<input id="submit" type="submit" value="submit">
+			</form>
+		</div> 
+	</section>
+	<footer>
+		<p>Copyright © 2014 UIBrush.</p> <!-- это же не похоже на параграф текста -->
+	</footer>
+</div>
+<script src="js/script.js"></script> <!-- зачем тебе пустой файл? -->
+</body>
+</html>
