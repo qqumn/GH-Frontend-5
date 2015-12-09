@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lazy Day</title>
+	<meta name="description" content="Lazy Day">
+	<meta name="keywords" content="Lazy Day"> <!-- я не думаю что ты знаешь зачем это -->
+	<link rel="shortcut icon" href="images/battery_low.ico">
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="stylesheets/font-awesome.css">
+	<link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+<body>
+<!-- HEADER -->
+	<header class="static"> <!-- у тебя не работает фиксированное меню -->
+		<div class="wrapper">
+	       	<nav class="main-nav"> <!-- неправильная структура, nav нужно конретно применять куда-то, а не просто в хедер -->
+				<h1 class="logo"><a href="#" title="Lazy day">Lazy day</a></h1> <!-- класс на ссылку, а не на заголовок -->
+		       	<ul id="menu" class="navigation default">
+		            <li class="selected"><a href="#home">Home</a></li>
+		            <li><a href="#about">Who</a></li>
+		            <li><a href="#work">Work</a></li>
+		            <li><a href="#services">Services</a></li>
+		            <li><a href="#blog">Blog</a></li>
+		            <li><a href="#team">Team</a></li>
+		            <li><a href="#contact">Contact</a></li>
+		        </ul>
+			</nav>
+		</div>
+	</header>
+<!-- END HEADER -->
+<!-- HERO -->
+	<section id="hero" class="hero">
+		<div class="wrapper">
+			<div class="hero-content">
+				<h2 class="hero-title"><span class="pre-title">Hello we are</span> Lazy Day</h2>
+				<a href="#about">
+					<span class="fa fa-angle-down fa-5x"></span>
+				</a>
+			</div>
+		</div>
+    </section>
+<!-- END HERO -->
+<!-- ABOUT -->
+    <section id="about" class="about">
+		<div class="wrapper">
+			<h2 class="about-title">who we are</h2> <!-- не нужно делать классы по конкретному тайтлу, делай общий класс -->
+			<p class="about-description">We are a bunch of designers, marketers and web developers trying to make a living in the crazy web industry. We love to ship projects and take lots of vacations, sleeping untill noon for a while</p>
+			<img class="about-img" src="images/lazy-man.jpg" alt="This must be a lazy man">
+			<h3 class="bars-title">our skills</h3> <!-- отступы не по макету -->
+			<ul class="progress-bars">
+				<li>
+					<h4 class="bars-description">Procrastination</h4>
+					<div class="meter orange nostripes">
+						<span style="width: 80%"></span> <!-- это что за инлайновые стиля?! -->
+					</div>
+				</li>
+				<li>
+					<h4 class="bars-description">Imagination</h4> <!-- это не заголовки -->
+					<div class="meter orange nostripes">
+						<span style="width: 98%"></span>
+					</div>
+				</li>
+				<li>
+					<h4 class="bars-description">Movie watching</h4>
+					<div class="meter orange nostripes">
+						<span style="width: 100%"></span>
+					</div>
+				</li>
+				<li>
+				<h4 class="bars-description">Efficiency</h4>
+				<div class="meter orange nostripes">
+					<span style="width: 30%"></span>
+				</div>
+				</li>
+			</ul>
+			<a class="work-button" href="#">See our work</a>
+		</div>
+	</section>
+<!-- END ABOUT -->
+<!-- PRE-BLOG -->
+	<section id="pre-blog" class="pre-blog">
+		<div class="wrapper-pre-blog">
+			<h2 class="pre-blog-title">Laziness works.</h2> <!-- все заголовки не по центру -->
+			<p class="pre-blog-description">And the simple way to incorporate its health benefits into your life is simply to take a nap.</p>
+		</div>
+	</section>
+<!-- END PRE_BLOG -->
+<!-- BLOG -->
+	<section id="blog" class="blog">
+		<div class="wrapper">
+			<h2 class="blog-title">what we do</h2>
+			<ul class="blog-articles">
+				<li>
+					<a href="#">
+						<span class="fa fa-user fa-3x"></span>
+					</a>
+					<h3>yawning</h3> <!-- бордер при ховере не по макету -->
+					<p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Sed ac neque eu purus tincidunt bibendum.</p>
+				</li>
+				<li>
+					<a href="#">
+						<span class="fa fa-clock-o fa-3x"></span>
+					</a>
+					<h3>procrastinating</h3>
+					<p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Sed ac neque eu purus tincidunt bibendum.</p>
+				</li>
+				<li>
+					<a href="#">
+						<span class="fa fa-power-off fa-3x"></span>
+					</a>
+					<h3>napping</h3>
+					<p>Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Sed ac neque eu purus tincidunt bibendum.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!-- END BLOG -->
+<!-- TEAM -->
+	<section id="team" class="team">
+		<div class="wrapper">
+			<h2 class="team-title">our team</h2>
+			<ul class="team-person">
+				<li>
+					<img src="images/boy-1.png" alt="This must be boy">
+					<h3 class="person-name">John SNow</h3>
+					<span class="person-status">C.e.o</span>
+					<p class="description-person">Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Sed ac neque eu purus tincidunt bibendum.</p>
+				</li>
+				<li>
+					<img src="images/pretty-girl-1.png" alt="This must be girl">
+					<h3 class="person-name">Scarlet O'hara</h3>
+					<span class="person-status">Graphic designer</span>
+					<p class="description-person">Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Sed ac neque eu purus tincidunt bibendum.</p>
+				</li>
+				<li>
+					<img src="images/boy-2.png" alt="This must be boy">
+					<h3 class="person-name">Jeff Bridges</h3>
+					<span class="person-status">Web developer</span>
+					<p class="description-person">Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Sed ac neque eu purus tincidunt bibendum.</p>
+				</li>
+				<li>
+					<img src="images/pretty-girl-2.png" alt="This must be girl">
+					<h3 class="person-name">Diana Ross</h3>
+					<span class="person-status">Photographer</span>
+					<p class="description-person">Lorem ipsum dolor sit amet, consecte tur adipiscing elit. Sed ac neque eu purus tincidunt bibendum.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!-- END TEAM -->
+<!-- WORK -->
+	<section id="work" class="work">
+		<div class="work-wrapper">
+			<h2 class="work-title">our work</h2>
+			<ul class="work-porfolio">
+				<li class="item">
+					<img src="images/item1.jpg" alt="This must be photo">
+					<div class="hover-effect">
+						<div class="hover-content">
+							<a class="title-icons" href="#">
+								<span class="fa fa-search fa-2x"></span>
+							</a>
+							<h3 class="item-title">
+								<a href="#">Beach photo session</a>
+							</h3>
+							<a class="item-category" href="#">Photography</a>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<img src="images/item2.jpg" alt="This must be photo">
+					<div class="hover-effect">
+						<div class="hover-content">
+							<a class="title-icons" href="#">
+								<span class="fa fa-search fa-2x"></span>
+							</a>
+							<h3 class="item-title">
+								<a href="#">Beach photo session</a> <!-- тут только иконка с лупой должна быть кликабельна -->
+							</h3>
+							<a class="item-category" href="#">Photography</a>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<img src="images/item3.jpg" alt="This must be photo">
+					<div class="hover-effect">
+						<div class="hover-content">
+							<a class="title-icons" href="#">
+								<span class="fa fa-search fa-2x"></span>
+							</a>
+							<h3 class="item-title">
+								<a href="#">Beach photo session</a>
+							</h3>
+							<a class="item-category" href="#">Photography</a>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<img src="images/item4.jpg" alt="This must be photo">
+					<div class="hover-effect">
+						<div class="hover-content">
+							<a class="title-icons" href="#">
+								<span class="fa fa-search fa-2x"></span>
+							</a>
+							<h3 class="item-title">
+								<a href="#">Beach photo session</a>
+							</h3>
+							<a class="item-category" href="#">Photography</a>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<img src="images/item5.jpg" alt="This must be photo">
+					<div class="hover-effect">
+						<div class="hover-content">
+							<a class="title-icons" href="#">
+								<span class="fa fa-search fa-2x"></span>
+							</a>
+							<h3 class="item-title">
+								<a href="#">Beach photo session</a>
+							</h3>
+							<a class="item-category" href="#">Photography</a>
+						</div>
+					</div>
+				</li>
+				<li class="item">
+					<img src="images/item6.jpg" alt="This must be photo">
+					<div class="hover-effect">
+						<div class="hover-content">
+							<a class="title-icons" href="#">
+								<span class="fa fa-search fa-2x"></span>
+							</a>
+							<h3 class="item-title">
+								<a href="#">Beach photo session</a>
+							</h3>
+							<a class="item-category" href="#">Photography</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+<!-- END WORK -->
+<!-- CONTACT -->
+	<section id="contact" class="contact">
+		<div class="contact-wrapper">
+		 	<h2 class="contact-title">contact us</h2>
+		 	<div class="contact-map">
+		 		<a href="#" title="map marker"> <!-- можно было постаратся и сделать карту  -->
+		 			<img class="map-marker" src="images/map-marker.png" alt="This must be a map marker">
+		 		</a>
+		 	</div>
+		</div>
+	</section>
+<!-- END CONTACT -->
+<!-- FOOTER -->
+	<footer>
+		<div class="wrapper">
+			<ul class="social-icons">
+		 		<li>
+		 			<a href="#">
+		 				<span class="fa fa-facebook fa-2x"></span>
+	 				</a>
+		 		</li>
+		 		<li>
+		 			<a href="#">
+		 				<span class="fa fa-twitter fa-2x"></span>
+	 				</a>
+		 		</li>
+		 		<li>
+		 			<a href="#">
+		 				<span class="fa fa-google-plus fa-2x"></span>
+	 				</a>
+		 		</li>
+		 		<li>
+		 			<a href="#">
+		 				<span class="fa fa-linkedin fa-2x"></span>
+	 				</a>
+		 		</li>
+		 		<li>
+		 			<a href="#">
+		 				<span class="fa fa-dribbble fa-2x"></span>
+	 				</a>
+		 		</li>
+		 	</ul>
+		 	<span class="copyright">Copyright &copy; 2012 <a class="author-link" href="#">Little NEKO</a> / All rights reserved.</span>
+		</div>
+	</footer>
+<!-- END FOOTER -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/nav/scroll.js"></script>
+	<script src="js/nav/navigation.js"></script>
+</body>
+</html>
+
+<!-- сверяй с макетом перед сдачей -->
+
