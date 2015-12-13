@@ -1,0 +1,635 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+
+section {
+  width: 100%;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font: 16px 'Roboto', Tahoma, sans-serif;
+  color: #000;
+}
+
+a:link, a:visited {
+  font-family: 'Roboto Slab', Arial, serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*-------------------------------------WRAPPER--------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*FALLBACK*/
+.wrapper {
+  margin: 0 auto;
+}
+
+.section-wrapper {
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+.section-wrapper:before, .section-wrapper:after {
+  content: "";
+  display: table;
+}
+.section-wrapper:after {
+  clear: both;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HEADER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+header {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #edeff1;
+  color: #fff;
+}
+header .section-wrapper {
+  margin: 0 auto;
+}
+header .main-logo {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 2%;
+  display: block;
+  width: 158px;
+  height: 60px;
+  font: 700 26px "Roboto Slab", Arial;
+  text-align: left;
+  text-transform: uppercase;
+}
+header .main-logo a {
+  color: #31353e;
+  text-decoration: none;
+}
+header .main-logo .logo-desc {
+  display: block;
+  width: 155px;
+  color: #dd4b2b;
+  font: 400 16px "Roboto Slab", Arial;
+  text-transform: none;
+}
+
+.menu-links {
+  position: absolute;
+  right: 10px;
+}
+.menu-links ul li {
+  float: left;
+}
+.menu-links ul li a {
+  display: block;
+  color: #31353e;
+  text-decoration: none;
+  padding: 0 10px;
+}
+.menu-links ul li a:hover {
+  color: #edeff1;
+}
+.menu-links ul li:hover {
+  background: #dd4b2b;
+}
+
+@media (max-width: 768px) {
+  header .section-wrapper {
+    width: 100%;
+  }
+  header h1 {
+    left: 3%;
+  }
+
+  .menu-links {
+    width: 100%;
+    top: 60px;
+  }
+  .menu-links:before {
+    content: '\2630';
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: -50px;
+    color: #31353e;
+    line-height: 40px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  .menu-links ul {
+    background: #edeff1;
+    width: 100%;
+  }
+  .menu-links ul li {
+    float: none;
+  }
+  .menu-links ul li a {
+    padding: 10px 3%;
+    line-height: 20px;
+    border-top: 1px solid #dd4b2b;
+  }
+
+  .menu-links ul {
+    display: none;
+  }
+
+  .menu-links.open ul {
+    display: block;
+  }
+}
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------HERO-----------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+.hero {
+  padding: 70px 0;
+  background: url("../images/hero_bg.png") top center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.hero .hero-title {
+  margin-top: 200px;
+  padding: 50% 0 20%;
+  color: #fff;
+  font: 300 3.2rem/4.8rem "Roboto Slab", Arial;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.hero .hero-title span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.hero .hero-items {
+  margin: 0 auto 50px;
+  text-align: center;
+}
+.hero .hero-items li {
+  display: inline-block;
+  width: 280px;
+  margin: 0 20px;
+  padding-top: 30px;
+  text-align: center;
+  vertical-align: top;
+}
+.hero .hero-items li .item-name {
+  padding: 20px;
+  color: #191b29;
+  font: 700 3rem "Roboto Slab", Arial;
+}
+.hero .hero-items li .white {
+  color: #fff;
+}
+.hero .hero-link {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  padding: 20px 60px;
+  border-radius: 30px;
+  font: 400 1.8rem "Roboto Slab", Arial;
+  color: #612316;
+  text-decoration: none;
+  text-align: center;
+  background-color: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.hero .hero-link:hover {
+  background: #cccccc;
+}
+
+.item-info {
+  font: 300 1.5rem/2.2rem "Roboto", Arial;
+  text-align: center;
+  color: #fff;
+}
+
+.news {
+  background: #edeff1;
+  overflow: hidden;
+  padding: 70px 0 30px;
+}
+.news .news-title {
+  padding: 40px 0 60px;
+  color: #31353e;
+  font: 700 30px/24px "Roboto Slab", Arial;
+  text-align: center;
+}
+.news .news-list {
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.news .news-list li {
+  display: inline-block;
+  width: 90%;
+  margin: 30px 10px 0;
+  text-align: center;
+}
+.news .news-list li img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.news .news-list li .list-item {
+  margin: 15px;
+  color: #31353e;
+  font: 700 2.4rem/3rem "Roboto Slab", Arial;
+}
+.news .news-list li .item-info {
+  color: #31353e;
+  margin-bottom: 20px;
+}
+.news .news-list li .news-link {
+  display: inline-block;
+  width: 100px;
+  padding: 22px 55px;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #4e5159;
+  font: 300 15px "Roboto", Arial;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.news .news-list li .news-link:hover {
+  background: #cccccc;
+}
+
+.newslatter {
+  height: 300px;
+  padding: 70px 0 30px;
+  background: url("../images/newsletter.jpg") top center no-repeat;
+  background-size: cover;
+}
+.newslatter .section-wrapper {
+  overflow: visible;
+}
+.newslatter .newslatter-title {
+  padding-top: 40px;
+  color: #fff;
+  font: 700 30px/48px "Roboto Slab", Arial;
+  text-align: center;
+}
+.newslatter .newlatter-info {
+  margin: 0 10%;
+  width: 80%;
+  color: #fff;
+  font: 300 15px/24px "Roboto Slab", Arial;
+  text-align: center;
+}
+.newslatter .newslatter-form {
+  position: relative;
+  display: block;
+  margin: 20px auto 0;
+  text-align: center;
+}
+.newslatter .newslatter-form .email {
+  position: absolute;
+  width: 75%;
+  height: 40px;
+  padding-left: 5%;
+  top: 0;
+  right: 10%;
+  color: #f3f4f6;
+  font: 400 1.2rem "Roboto Slab", Arial;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.newslatter .newslatter-form .email::-webkit-input-placeholder {
+  color: #f3f4f6;
+  font: 400 1.2rem/1.2rem "Roboto Slab", Arial;
+}
+.newslatter .newslatter-form .email:-moz-placeholder {
+  color: #f3f4f6;
+  font: 400 1.2rem/1.2rem "Roboto Slab", Arial;
+}
+.newslatter .newslatter-form .email:-ms-input-placeholder {
+  color: #f3f4f6;
+  font: 400 1.2rem/1.2rem "Roboto Slab", Arial;
+}
+.newslatter .newslatter-form .submit {
+  position: absolute;
+  right: 10%;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 13px 40px;
+  color: #612316;
+  font: 400 1.2rem "Roboto Slab", Arial;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.newslatter .newslatter-form .submit:hover {
+  background: #e6e6e6;
+}
+
+.news-2 {
+  padding: 1px 0 0;
+  background: #fff;
+}
+.news-2 .articles {
+  text-align: center;
+}
+.news-2 .articles li {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+.news-2 .articles li:nth-child(2n) a {
+  background-color: #4b4e73;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.news-2 .articles li:nth-child(2n) a:hover {
+  background: #373954;
+}
+.news-2 .articles li .article-name {
+  color: #191b29;
+  margin-top: 10px;
+  font: 700 2.4rem "Roboto Slab", Arial;
+}
+.news-2 .articles li img {
+  width: 100%;
+}
+.news-2 .articles li p {
+  padding: 1% 5%;
+  width: 90%;
+  margin-top: 10px;
+  font: 300 1.4rem "Roboto", Arial;
+  color: #191b29;
+}
+.news-2 .articles li p:last-of-type {
+  margin-bottom: 20px;
+}
+.news-2 .articles li a {
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 50px;
+  padding: 15px 55px;
+  border-radius: 30px;
+  background-color: #dd4b2b;
+  color: #fff;
+  font: 400 18px "Roboto Slab", Arial;
+  text-align: center;
+  text-decoration: none;
+}
+.news-2 .articles li a:hover {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: #b8391d;
+}
+
+/*---------------------------------------------footer-nav---------------------------------------------*/
+.footer-nav .section-wrapper {
+  padding: 80px 0 50px;
+  background: #d75d0e;
+  text-align: left;
+}
+.footer-nav .parent-ft-nav {
+  text-align: center;
+}
+.footer-nav .parent-ft-nav > li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 8%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.footer-nav .ft-nav-1st a,
+.footer-nav .ft-nav-2nd a,
+.footer-nav .ft-nav-3rd a {
+  font: 400 1.4rem/2.8rem "Roboto", Arial;
+}
+.footer-nav .ft-nav-1st a:hover,
+.footer-nav .ft-nav-2nd a:hover,
+.footer-nav .ft-nav-3rd a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  padding: 95px 0 245px;
+  background: url("../images/newsletter.jpg") top center no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+footer span {
+  display: block;
+  color: #fff;
+  font: 300 1.8rem / 2.4rem 'Proxima_Nova_Normal';
+  text-align: center;
+}
+footer span a {
+  color: #fff;
+  font: 700 1.8rem / 2.4rem 'Proxima_Nova_Bold';
+  text-decoration: none;
+}
+footer span a:hover {
+  text-decoration: underline;
+}
+
+/*=====================================================================================================*/
+/*============================================MEDIA QUARES=============================================*/
+/*=====================================================================================================*/
+/*====== 480 ======*/
+@media (min-width: 480px) {
+  .hero .hero-title {
+    font-size: 4.4rem;
+  }
+  .hero .hero-title span {
+    font-size: 2rem;
+  }
+}
+/*====== 768 ======*/
+@media (min-width: 768px) {
+  .hero .hero-title {
+    font-size: 5.8rem;
+  }
+  .hero .hero-title span {
+    font-size: 2.6rem;
+  }
+
+  .news .news-list li {
+    width: 440px;
+  }
+
+  .newslatter .section-wrapper {
+    width: 530px;
+  }
+  .newslatter .newslatter-form .email, .newslatter .newslatter-form .submit {
+    font-size: 1.5rem;
+  }
+  .newslatter .newslatter-form .email {
+    height: 44px;
+  }
+  .newslatter .newslatter-form .email::-webkit-input-placeholder {
+    font: 1.5rem/1.8rem "Roboto Slab", Arial;
+  }
+  .newslatter .newslatter-form .email:-moz-placeholder {
+    font: 1.5rem/1.8rem "Roboto Slab", Arial;
+  }
+  .newslatter .newslatter-form .email:-ms-input-placeholder {
+    font: 1.5rem/1.8rem "Roboto Slab", Arial;
+  }
+
+  .news-2 .articles li {
+    margin: 50px 20px 0;
+    width: 405px;
+  }
+}
+/*====== 1024 ======*/
+@media (min-width: 1024px) {
+  header {
+    padding-top: 40px;
+    height: 100px;
+  }
+  header .main-logo {
+    top: 40px;
+  }
+
+  .menu-links ul li {
+    float: left;
+    margin: 0 20px;
+  }
+  .menu-links ul li a {
+    font-size: 18px;
+  }
+  .menu-links ul li a:hover {
+    background: #DD4B2B;
+  }
+
+  .hero .hero-title {
+    font-size: 7.2rem;
+  }
+  .hero .hero-title span {
+    font-size: 3rem;
+  }
+
+  .news .news-list li {
+    width: 370px;
+  }
+
+  .news-2 .section-wrapper {
+    padding: 50px 0;
+    width: 950px;
+  }
+  .news-2 .articles li {
+    width: 100%;
+  }
+  .news-2 .articles li:nth-child(2) img {
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 50px;
+  }
+  .news-2 .articles li:nth-child(2) p {
+    width: 95%;
+    line-height: 20px;
+  }
+  .news-2 .articles li:nth-child(2) a {
+    float: right;
+    margin-right: 20px;
+  }
+  .news-2 .articles li img {
+    width: 405px;
+    float: right;
+  }
+  .news-2 .articles li .article-name {
+    text-align: left;
+    font-size: 3rem;
+  }
+  .news-2 .articles li p {
+    width: 50%;
+    padding: 0;
+    line-height: 20px;
+    text-align: left;
+  }
+  .news-2 .articles li a {
+    float: left;
+  }
+}
