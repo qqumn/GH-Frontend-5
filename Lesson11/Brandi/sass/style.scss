@@ -1,0 +1,28 @@
+// Screen
+// ======
+
+@import "grids";
+@import "compass/reset";
+
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300);
+
+@import "main_styles/header";
+@import "main_styles/content";
+@import "main_styles/footer";
+
+body {
+  font: 400 13px/24px 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  //@include container();
+  //overflow: hidden;
+  //max-width: 1140px;
+  text-align: center;
+}
