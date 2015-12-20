@@ -1,0 +1,63 @@
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+
+footer {
+  height: 90px;
+  .copyright {
+    display: block;
+    margin-top: 20px;
+
+    font-size: 15px;
+  }
+}
+.social-networks {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  li {
+    display: inline-block;
+    a {
+      padding: 12px;
+
+      color: #fff;
+
+      border-radius: 2px;
+      background-color: #15a4fa;
+
+      @include transition(all, .7s, ease);
+
+      .fa {
+        width: 25px;
+
+        font-size: 15px;
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  footer {
+    .copyright {
+      float: left;
+      margin-top: 50px;
+    }
+    .social-networks {
+      float: right;
+      margin-top: 45px;
+      margin-bottom: 45px;
+
+      li {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,436 @@
+
+
+$simple-text: #999;
+$title: #2d3950;
+
+//Да, похожие миксины есть в компассе, но для меня они менее удобны
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+
+/*------------- HERO ------------*/
+
+.hero {
+  position: relative;
+  min-height: 400px;
+  padding: 110px 0;
+
+  background: url("../images/hero-bg.png");
+  background-size: cover;
+
+  color: white;
+  text-align: center;
+
+  .section-title {
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    border-bottom: 2px solid #15a4fa;
+  }
+
+  h3 {
+    margin: 40px 0 60px;
+
+    font-weight: 400;
+  }
+
+  .call-to-action {
+    display: inline-block;
+    position: relative;
+    padding: 20px 35px;
+
+    font-size: 18px;
+    color: #fff;
+
+    border: 1px solid #15a4fa;
+    border-radius: 2px;
+
+    @include transition(all, .7s, ease);
+
+    &:hover{
+      background-color: #15a4fa;
+    }
+  }
+
+  .arrow-down {
+    display: block;
+    position: absolute;
+    bottom: 45px;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+
+    color: #ffffff;
+
+    animation: mymove 1s infinite;
+
+  }
+  @keyframes mymove {
+    0%,100% {bottom: 45px;}
+    50% {bottom: 40px;}
+  }
+}
+/*------------- INTRO ------------*/
+.intro {
+  background-color: #f6f9f9;
+
+  .container {
+    padding: 80px 30px 100px;
+  }
+
+  .section-title {
+    padding: 0 10px;
+    font-size: 35px;
+    font-weight: 400;
+    color: $title;
+  }
+
+  p {
+    margin-top: 20px;
+
+    font-size: 18px;
+    line-height: 27px;
+
+    color: $simple-text;
+
+    text-align: center;
+  }
+}
+/*------------- FEATURES ------------*/
+.features {
+  background-color: #fff;
+
+  .container {
+    padding: 65px 20px;
+  }
+
+  .features-list {
+
+    li {
+      display: inline-block;
+      margin: 0 50px;
+
+      .fa {
+        height: 100px;
+        width: 100px;
+        
+        font-size: 40px;
+        color: #fff;
+        line-height: 100px;
+        text-shadow: 0.8px 0.6px 1px rgba(2, 2, 2, 0.4);
+
+        background: #48baff;
+        background: -moz-linear-gradient(left, #48baff 0%, #48baff 50%, #5fc3ff 50%);
+        background: -webkit-linear-gradient(left, #48baff 0%,#48baff 50%,#5fc3ff 50%);
+        background: linear-gradient(to right, #48baff 0%,#48baff 50%,#5fc3ff 50%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48baff', endColorstr='#5fc3ff',GradientType=1 );
+
+        @include transition(all, .5s, ease-out);
+        &:hover {
+          border-radius: 5px;
+        }
+      }
+      .fa-mobile {
+        font-size: 72px;
+      }
+      .fa-paper-plane {
+        font-size: 40px;
+      }
+      .fa-bullhorn {
+        font-size: 42px;
+      }
+    }
+    h4 {
+      margin-top: 30px;
+
+      font-size: 22px;
+      color: $title;
+    }
+    p {
+      //margin-top: 20px;
+      margin: 20px auto 30px;
+      max-width: 260px;
+      text-align: center;
+
+      font-size: 15px;
+      line-height: 22px;
+      color: $simple-text;
+    }
+  }
+}
+
+/*------------- PORTFOLIO ------------*/
+
+.portfolio {
+  background-color: #f6f9f9;
+
+  .container {
+    overflow: hidden;
+    padding: 80px 0 0;
+  }
+
+  .section-title {
+    padding: 0 10px;
+    font-size: 35px;
+    font-weight: 400;
+    color: $title;
+  }
+
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    font-size: 15px;
+    color: $simple-text;
+
+    text-align: center;
+  }
+
+  li {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+
+    font-size: 0;
+    img {
+      //min-width: 320px;
+      min-width: 100%;
+    }
+
+    &:hover {
+      .portfolio-rollover {
+        opacity: 1;
+
+        -webkit-transform: rotateY(0deg) scale(1,1);
+        -moz-transform: rotateY(0deg) scale(1,1);
+        -ms-transform: rotateY(0deg) scale(1,1);
+        -o-transform: rotateY(0deg) scale(1,1);
+        transform: rotateY(0deg) scale(1,1);
+      }
+    }
+    .portfolio-rollover {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+
+      color: #fff;
+
+      background-color: rgba(21, 164, 250, 0.9);
+      opacity: 0;
+      z-index: 1;
+
+      @include transition(all, 1s, ease-out);
+
+      -webkit-transform: rotateY(180deg) scale(0.5,0.5);
+      -moz-transform: rotateY(180deg) scale(0.5,0.5);
+      -ms-transform: rotateY(180deg) scale(0.5,0.5);
+      -o-transform: rotateY(180deg) scale(0.5,0.5);
+      transform: rotateY(180deg) scale(0.5,0.5);
+
+    }
+  }
+}
+.portfolio-rollover {
+  li {
+    display: inline-block;
+    margin-top: 95px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    width: 47px;
+    a {
+      display: block;
+      padding: 15px;
+
+      color: #fff;
+
+      border: 1px solid #fff;
+      border-radius: 2px;
+
+      @include transition(all, .4s, ease-out);
+      &:hover {
+        color: #15a4fa;
+
+        background-color: #fff;
+      }
+      .fa {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+/*------------- CONTACT US ------------*/
+.contact-us {
+  min-height: 350px;
+
+  background: url("../images/contact-us-bg.png") center #2d3950;
+  background-size: cover;
+  .container {
+    padding: 80px 10px;
+    margin: 0 auto;
+  }
+  .section-title {
+    font-size: 35px;
+    color: #fff;
+  }
+  h5 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    font-size: 15px;
+    color: $simple-text;
+  }
+  .contact-form {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 555px;
+
+    font-size: 12px;
+    .form-name, .form-email, .form-message {
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+
+      font-family: 'Lato';
+      color: #fff;
+
+      border: 1px solid #999;
+      border-radius: 2px;
+      background: rgba(0,0,0,0);
+
+      ::-webkit-input-placeholder {font-family: 'Lato';}
+      ::-moz-placeholder          {font-family: 'Lato';}
+      :-moz-placeholder           {font-family: 'Lato';}
+      :-ms-input-placeholder      {font-family: 'Lato';}
+
+      @include transition(all, .4s, ease);
+
+      &:focus {
+        border: 1px solid #15a4fa;
+        outline: none;
+      }
+    }
+    .form-message {
+      resize: none;
+    }
+    label {
+      float: left;
+
+      color: #fff;
+    }
+    .submit {
+      float: right;
+      padding: 10px 30px;
+
+      color: #fff;
+
+      border: 1px solid #15a4fa;
+      border-radius: 2px;
+      background: rgba(0,0,0,0);
+      cursor: pointer;
+
+      @include transition(all, .7s, ease);
+
+      &:hover {
+        background-color: #15a4fa;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*================ RESPONSIVE ==================*/
+/*===== 480 ======*/
+@media (min-width: 480px) {
+.portfolio {
+  .container {
+    padding-bottom: 100px;
+  }
+  .section-title {
+    padding: 0 100px;
+  }
+  .portfolio-list > li {
+    margin: 10px;
+  }
+}
+
+}
+
+
+/*===== 768 ======*/
+@media screen and (min-width: 768px) {
+  .hero {
+    .section-title {
+      font-size: 90px;
+    }
+  }
+  .intro {
+    .section-title {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+  .portfolio {
+    .section-title {
+      font-size: 40px;
+    }
+  }
+  .contact-us {
+    font-size: 15px;
+  }
+  .contact-form {
+    .form-message {
+      height: 160px;
+      .form-name, .form-email, .form-message {
+        padding: 25px 20px;
+
+        ::-webkit-input-placeholder {
+          font-size: 15px;
+        }
+        ::-moz-placeholder {
+          font-size: 15px;
+        }
+        :-moz-placeholder {
+          font-size: 15px;
+        }
+        :-ms-input-placeholder {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+/*===== 1024 =====*/
+@media (min-width: 1024px) {
+  .hero {
+    .section-title {
+      font-size: 120px;
+    }
+  }
+}

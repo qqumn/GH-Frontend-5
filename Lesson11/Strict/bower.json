@@ -1,0 +1,22 @@
+{
+  "name": "Strict + susy",
+  "authors": [
+    "qqumn <kilihevich_nikita@ukr.net>"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.5.0"
+  }
+}
