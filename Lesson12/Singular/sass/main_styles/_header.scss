@@ -1,0 +1,125 @@
+$Open_Sans: 'Open Sans', 'Arial', sans-serif;
+$main-color: #222;
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  border-top: 5px solid #d11f2d;
+  background-color: rgba(35, 35, 35, 0.95);
+  .container {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .main-menu {
+    height: 45px;
+    margin: 30px 0;
+  }
+
+  span {
+    float: right;
+    margin-top: 11px;
+    margin-right: 10px;
+
+    color: #fff;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.logo {
+  position: relative;
+  float: left;
+  margin-left: 10px;
+
+  font: 700 20px $Open_Sans;
+
+  text-transform: uppercase;
+  &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 6px;
+    left: 110px;
+    height: 15px;
+    width: 69px;
+
+    background: url("../images/logo-line.png");
+  }
+  &:before {
+    position: absolute;
+    content: "single page website template";
+    top: 25px;
+    width: 200px;
+
+    font: 300 12px $Open_Sans;
+
+    text-align: left;
+
+    text-transform: uppercase;
+
+  }
+}
+.main-nav {
+  float: right;
+  margin-right: 50px;
+  &:before {
+    content: '\2630';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    color: white;
+    font-size: 24px;
+    line-height: 40px;
+    cursor: pointer;
+  }
+  ul {
+    li {
+      display: inline-block;
+      margin: 0 20px;
+      font: 14px 'HelveticaNeue-Bold', sans-serif;
+    }
+  }
+}
+.main-nav ul {
+  display: none;
+}
+.main-nav.open ul {
+  display: block;
+}
+
+@media (max-width: 768px){
+.main-nav{
+  width: 100%;
+  ul {
+    margin-top: 25px;
+    li {
+      display: block;
+      margin: 0 40px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      width: 100%;
+      line-height: 55px;
+      a {
+        @include transition(all, .3s, ease);
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      &:last-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+}
+}

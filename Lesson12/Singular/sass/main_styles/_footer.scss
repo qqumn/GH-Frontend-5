@@ -1,0 +1,68 @@
+$Open_Sans: 'Open Sans', 'Arial', sans-serif;
+$main-color: #222;
+
+footer {
+  background-color: $main-color;
+  .container {
+    padding: 50px 20px;
+    overflow: hidden;
+    & > span {
+      margin-top: 12px;
+      font: 400 14px $Open_Sans;
+      color: white;
+    }
+  }
+  .soc-links {
+    li {
+      display: inline-block;
+      margin: 3px;
+    }
+    a {
+      color: white;
+    }
+    .fa {
+      padding: 10px;
+      font-size: 30px;
+      width: 30px;
+      text-align: center;
+      vertical-align: middle;
+      background-color: rebeccapurple;
+      @include transition(all, .2s, ease);
+    }
+    .fa-behance {
+      background-color: #018ada;
+      &:hover {
+        color: darken(#018ada, 20%);
+      }
+    }
+    .fa-facebook {
+      background-color: #3c5a98;
+      &:hover {
+        color: darken(#3c5a98, 20%);
+      }
+    }
+    .fa-pinterest-p {
+      background-color: #d13f3f;
+      &:hover {
+        color: darken(#d13f3f, 20%);
+      }
+    }
+    .fa-dribbble {
+      background-color: #e95c93;
+      &:hover {
+        color: darken(#e95c93, 20%);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    .container > span {
+      float: left;
+    }
+    .soc-links {
+      float: right;
+    }
+  }
+}

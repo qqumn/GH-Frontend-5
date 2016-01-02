@@ -1,0 +1,683 @@
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+.hero {
+  position: relative;
+  padding-top: 65px;
+  background: url('../images/hero.jpg') center no-repeat;
+  background-size: cover;
+  .container {
+    padding-bottom: 340px;
+  }
+  .hero-title {
+    position: relative;
+    max-width: 640px;
+    margin: 180px auto 0;
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 300 34px/46px $Lato;
+    text-align: center;
+    text-transform: uppercase;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 200px;
+      left: 50%;
+      bottom: 0;
+      margin-left: -100px;
+      background: $second-color;
+    }
+
+  }
+  p {
+    margin: 0 auto;
+    max-width: 951px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: center;
+    &:first-of-type {
+      margin-top: 10px;
+    }
+  }
+  .more-button {
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 50px;
+    left: 50%;
+    bottom: 230px;
+    margin-left: -100px;
+    font: 700 15px/50px $Lato;
+    color: #fff;
+    text-align: center;
+    background-color: $second-color;
+    border-radius: 24px;
+    @include transition(all, .3s, ease);
+    &:hover {
+      background-color: darken($second-color, 15%);
+    }
+  }
+}
+
+.section-title {
+  position: relative;
+  margin: 20px 0 40px;
+  text-align: center;
+  font: 300 38px/52px $Lato;
+  font-style: italic;
+  color: #5a5a5a;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -100px;
+    background: $second-color;
+  }
+}
+
+.site-name {
+  margin-right: 5px;
+  font-weight: 900;
+}
+
+.introduction {
+  position: relative;
+  background: #f4f4f4;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 40px;
+    width: 100%;
+    background: url("../images/intro-line.png") center no-repeat;
+  }
+  .container {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  .introduction-title {
+    position: relative;
+    margin: 100px 0 45px;
+    padding-bottom: 35px;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 52px;
+    font-style: italic;
+    color: #5a5a5a;
+    &:after {
+      position: absolute;
+      content: "";
+      margin-left: -100px;
+      bottom: 0;
+      left: 50%;
+      width: 200px;
+      height: 2px;
+      background-color: $second-color;
+    }
+  }
+  p {
+    clear: both;
+    margin-bottom: 50px;
+    font: 300 15px/30px $Lato;
+    color: #5a5a5a;
+  }
+  .video-link {
+    clear: both;
+    margin-bottom: 100px;
+    font: 400 15px/30px $Lato;
+    color: $second-color;
+    text-transform: uppercase;
+    @include transition(all, .3s, ease);
+    &:after {
+      content: '';
+      font-family: FontAwesome;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      color: $second-color;
+      line-height: 30px;
+      font-size: 15px;
+      border: 1px solid $second-color;
+      text-align: center;
+      border-radius: 40px;
+      @include transition(all, .3s, ease);
+    }
+    &:hover, &:hover:after {
+      color: darken($second-color, 15%);
+      &:after {
+        color: #f4f4f4;
+        border: 1px solid darken($second-color, 15%);
+        background-color: darken($second-color, 15%);
+      }
+    }
+  }
+}
+
+.services {
+  background: #fff;
+  .container {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+  p {
+    display: inline-block;
+    max-width: 680px;
+    font: 300 15px/30px $Lato;
+  }
+  .services-list {
+    text-align: center;
+    li {
+      display: inline-block;
+      max-width: 150px;
+      margin: 30px 20px;
+      text-align: center;
+      h3 {
+        margin-top: 20px;
+        font-size: 400 15px/30px $Lato;
+        color: $second-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+.quotations {
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/quotes-bg.png") center no-repeat;
+  background-size: cover;
+  .container {
+    padding: 50px 20px;
+    max-width: 820px;
+  }
+  blockquote {
+    position: relative;
+    margin: 70px 0;
+    font: 300 20px/34px $Lato;
+    font-style: italic;
+    color: #fff;
+    &:before {
+      content: "“";
+      position: absolute;
+      left: 50%;
+      top: -30px;
+      width: 100px;
+      margin-left: -50px;
+      font: 700 120px/52px 'DroidSerif';
+      color: $second-color;
+    }
+    &:after {
+      content: "”";
+      position: absolute;
+      left: 50%;
+      bottom: -90px;
+      width: 100px;
+      margin-left: -50px;
+      font: 700 120px/52px 'DroidSerif';
+      color: $second-color;
+    }
+  }
+}
+
+.prices {
+  background-color: #f4f4f4;
+  .container {
+    padding: 70px 20px;
+    text-align: center;
+  }
+  p {
+    display: inline-block;
+    margin-bottom: 20px;
+    font: 300 15px/30px $Lato;
+    max-width: 680px;
+  }
+  .prices-list {
+    margin: 0 auto;
+    text-align: center;
+    li {
+      position: relative;
+      display: inline-block;
+      max-width: 262px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      background: #fff;
+      &:hover .price-header {
+          background-color: $second-color;
+        }
+      }
+    }
+  }
+  .price-header {
+    display: block;
+    width: 262px;
+    height: 120px;
+    background-color: #5a5a5a;
+    padding-top: 30px;
+    @include transition(all, .5s, ease);
+    .dollar {
+      color: #f4f4f4;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .number {
+      color: #f4f4f4;
+      font-size: 50px;
+      font-weight: 700;
+    }
+    .per-month {
+      display: block;
+      color: #f4f4f4;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 10px;
+    }
+  }
+  .category {
+    position: absolute;
+    display: block;
+    top: 125px;
+    left: 50%;
+    width: 200px;
+    height: 50px;
+    margin-left: -100px;
+    font: 700 15px/50px $Lato;
+    color: #5a5a5a;
+    text-align: center;
+    border-radius: 24px;
+    background-color: #f4f4f4;
+    text-transform: uppercase;
+  }
+  .description {
+    margin: 40px auto 20px;
+    text-align: center;
+    li {
+      display: block;
+      width: 100%;
+      margin: 10px auto;
+      text-align: center;
+      color: #5a5a5a;
+      font: 300 15px/38px $Lato;
+    }
+  }
+  .buy-button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 38px auto 36px;
+    text-align: center;
+    line-height: 50px;
+    color: #f4f4f4;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: $second-color;
+    border-radius: 24px;
+    @include transition(all, .3s, ease);
+    &:hover {
+      background: darken($second-color, 15%);
+    }
+  }
+
+.features {
+  background: #fff;
+  .container {
+    padding: 70px 20px;
+  }
+  .features-list {
+    margin: 0 auto;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 20px;
+      max-width: 350px;
+      img {
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $second-color;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 30px;
+        color: #5a5a5a;
+      }
+    }
+  }
+}
+
+.join {
+  background: $second-color;
+  .container {
+    padding: 70px 20px;
+  }
+  .welcome-message {
+    margin-bottom: 85px;
+    font-size: 28px;
+    line-height: 43px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .join-button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 50px;
+    color: $second-color;
+    text-align: center;
+    border-radius: 24px;
+    background: #fff;
+    text-transform: uppercase;
+    @include transition(all, .3s, ease);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.portfolio {
+  position: relative;
+  .container {
+    padding: 70px 0;
+    text-align: center;
+  }
+  p {
+    display: inline-block;
+    margin-bottom: 20px;
+    max-width: 680px;
+    font: 300 15px/30px $Lato;
+  }
+  .works {
+    margin: 0 auto 115px;
+    text-align: center;
+    li {
+      display: inline-block;
+      max-width: 320px;
+      overflow: hidden;
+      margin: 0;
+      text-align: left;
+      background: #f4f4f4;
+      .image {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        height: 250px;
+        &:after {
+          content: "";
+          position: absolute;
+          display: block;
+          bottom: 0;
+          height: 11px;
+          width: 100%;
+          background: url("../images/portfolio-line.png") center no-repeat;
+        }
+      }
+      .rollover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background-color: rgba(237,20,91, 0.9);
+        opacity: 0;
+        @include transition(all, .5s, ease);
+        &:hover {
+          opacity: 1;
+        }
+        .fa {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 40px;
+          margin-left: -20px;
+          margin-top: -20px;
+          font-size: 40px;
+          font-weight: 300;
+        }
+      }
+      .image-description {
+        margin: 20px 15px;
+
+        h3 {
+          margin: 15px auto;
+          text-align: left;
+          color: #5a5a5a;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 30px;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #5a5a5a;
+          text-align: left;
+          font-size: 15px;
+          font-weight: 300;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  .show-button {
+    display: block;
+    position: absolute;
+    margin-left: -50px;
+    max-width: 100px;
+    left: 50%;
+    bottom: 80px;
+    font-weight: 400 15px/30px $Lato;
+    color: #ed145b;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+
+.info {
+  background: url('../images/mach-free-bg.png') center no-repeat;
+  background-size: cover;
+  .container {
+    padding: 70px 20px;
+    max-width: 680px;
+    color: #fff;
+    text-align: center;
+
+  }
+  .section-title {
+    color: #fff;
+  }
+  p {
+    margin-bottom: 50px;
+    font: 300 15px/30px $Lato;
+  }
+  .show-button {
+    display: block;
+    max-width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #f4f4f4;
+    border-radius: 24px;
+    background-color: $second-color;
+    text-transform: uppercase;
+    @include transition(all, .3s, ease);
+
+    &:hover {
+      background: darken($second-color, 15%);
+    }
+  }
+}
+
+.share {
+  background-color: #f4f4f4;
+  .container {
+    overflow: hidden;
+    padding: 70px 20px;
+    max-width: 500px;
+    text-align: center;
+  }
+  .share-title {
+    position: relative;
+    margin: 20px 0 40px;
+    font: 300 38px/52px $Lato;
+    font-style: italic;
+    color: #5a5a5a;
+    &:after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 200px;
+      margin-left: -100px;
+      left: 50%;
+      bottom: -20px;
+      background: $second-color;
+    }
+  }
+
+  p {
+    margin-bottom: 50px;
+    max-width: 460px;
+    font: 300 15px/30px $Lato;
+    color: #5a5a5a;
+  }
+
+  .share-button {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    margin-bottom: 145px;
+    color: #f4f4f4;
+    font: 700 15px/50px $Lato;
+    text-align: center;
+    border-radius: 24px;
+    background-color: $second-color;
+    text-transform: uppercase;
+    @include transition(all, .3s, ease);
+    &:hover {
+      background: darken($second-color, 15%);
+    }
+  }
+}
+
+
+/*=========================================*/
+
+@media (min-width: 480px) {
+  .hero {
+    .hero-title {
+      font-size: 46px;
+    }
+    p {
+      font-size: 22px;
+      line-height: 38px;
+    }
+  }
+  .portfolio {
+    .works li {
+      max-width: 360px;
+    }
+  }
+  .join {
+    .welcome-message {
+      font-size: 38px;
+      line-height: 52px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .quotations {
+    blockquote {
+      font-size: 25px;
+      line-height: 40px;
+    }
+  }
+
+  .prices {
+    .container {
+      max-width: 1200px;
+      padding: 70px 0;
+    }
+    .prices-list > li {
+      margin: 15px;
+    }
+  }
+  .features {
+    .container {
+      max-width: 1200px;
+      padding: 70px 0;
+    }
+  }
+  .portfolio {
+    .container {
+      max-width: 1200px;
+      padding: 70px 0px;
+    }
+    .works li {
+      margin: 15px;
+    }
+  }
+  .share {
+    background: url('../images/share-bg.png') center no-repeat;
+    background-size: cover;
+    .container {
+      margin-left: 55%;
+      text-align: left;
+    }
+    .share-title:after {
+      left: 0;
+      margin-left: 0;
+    }
+  }
+}
+@media (min-width: 950px) {
+ .introduction {
+   background: url("../images/intro-bg.png") center no-repeat;
+   background-size: cover;
+   .container {
+     text-align: left;
+   }
+   .introduction-title {
+     float: left;
+     max-width: 380px;
+     &:after {
+       left: 0;
+       margin-left: 0;
+     }
+   }
+   p {
+     float: left;
+     max-width: 460px;
+   }
+   .video-link {
+     float: left;
+   }
+ }
+}

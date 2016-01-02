@@ -1,0 +1,25 @@
+// Screen
+// ======
+
+@import "grids";
+@import "compass/reset";
+
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic,300,400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:700);
+
+@import "main_styles/header";
+@import "main_styles/content";
+@import "main_styles/footer";
+
+.container {
+  @include container();
+  padding: 0 20px;
+  overflow: hidden;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+a:link, a:visited {
+  text-decoration: none;
+}

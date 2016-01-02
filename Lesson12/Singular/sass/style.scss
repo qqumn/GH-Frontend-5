@@ -1,0 +1,40 @@
+// Screen
+// ======
+
+@import "grids";
+@import "compass/reset";
+
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:800);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,800,700,600);
+
+@import "main_styles/header";
+@import "main_styles/content";
+@import "main_styles/footer";
+
+@font-face {
+  font-family: 'HelveticaNeue-Bold';
+  src: url('HelveticaNeue-Bold.eot');
+  src: url('HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+  url('HelveticaNeue-Bold.woff') format('woff'),
+  url('HelveticaNeue-Bold.ttf') format('truetype'),
+  url('HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font: 300 22px/36px 'Open Sans', sans-serif;
+
+  //border-top: 5px solid #d11f2d;
+}
+
+.container {
+  @include container();
+  text-align: center;
+}

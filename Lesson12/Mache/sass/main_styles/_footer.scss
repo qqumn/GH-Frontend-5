@@ -1,0 +1,38 @@
+footer {
+  background-color: #2b2b2b;
+  .container {
+    padding: 20px;
+    text-align: center;
+  }
+  .copyright {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #fff;
+    a {
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .design {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #fff;
+  }
+}
+
+@media (min-width: 480px) {
+  footer {
+    .copyright {
+      float: left;
+    }
+    .design {
+      float: right;
+    }
+  }
+}

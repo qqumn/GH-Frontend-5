@@ -1,0 +1,404 @@
+$Open_Sans: 'Open Sans', 'Arial', sans-serif;
+$Montserrat: 'Montserrat', 'Arial', sans-serif;
+$main-color: #222;
+
+.hero {
+  position: relative;
+  min-height: 450px;
+
+  background: url("../images/hero-bg.png") #222;
+  background-size: cover;
+  .container{
+    padding: 120px 20px 0 20px;
+    color: #fff;
+    h2 {
+      font: 700 30px $Open_Sans;
+
+      text-transform: uppercase;
+    }
+    p {
+      font: 400 15px $Open_Sans;
+    }
+    span {
+      position: absolute;
+      display: inline-block;
+      left: 50%;
+      bottom: 40px;
+      width: 150px;
+      margin-left: -75px;
+      font-size: 14px;
+      font-family: Raleway, sans-serif;
+      text-transform: uppercase;
+      &:after {
+        display: block;
+        content: "\f078";
+        font-family: FontAwesome;
+        line-height: 20px;
+      }
+    }
+  }
+}
+.section-name {
+  margin-bottom: 60px;
+  font: 400 40px $Open_Sans;
+  color: #fff;
+}
+.introduction {
+  margin: 0 auto;
+  .container {
+    padding: 70px 20px;
+    max-width: 760px;
+    color: $main-color;
+    .section-name {
+      color: $main-color;
+    }
+  }
+}
+.download-info {
+  .container {
+    max-width: 760px;
+  }
+  //padding: 130px 20px;
+  color: white;
+  //margin: 0 auto;
+  background: url("../images/download-bg.png");
+  background-size: cover;
+  p {
+    margin-bottom: 60px;
+    color: white;
+  }
+
+}
+.download-button {
+  margin-top: 50px;
+  padding: 15px 40px;
+  font: 400 23px/60px $Open_Sans;
+  border: 3px solid white;
+  color: white;
+  @include transition(all, .3s, ease);
+  &:hover {
+    color: $main-color;
+    background-color: white;
+  }
+}
+
+.about {
+  background: url('../images/ipad-20.png') bottom right no-repeat #222;
+  .container {
+    padding: 60px 20px 50px 20px;
+    color: white;
+  }
+  .about-list {
+    margin: 0 auto;
+    max-width: 500px;
+    li {
+      display: inline-block;
+      margin: 20px;
+      .fa {
+        margin: 10px;
+        padding: 10px;
+        font-size: 35px;
+        width: 35px;
+        color: black;
+        border: 3px solid black;
+        border-radius: 40px;
+        background-color: white;
+      }
+      h3 {
+        font: 18px $Montserrat;
+      }
+      p {
+        font: 400 16px $Open_Sans;
+      }
+    }
+  }
+}
+
+.services {
+  background-color: #d11f2d;
+  .container {
+    padding: 60px 20px 50px 20px;
+  }
+  .services-list {
+    li {
+      overflow: hidden;
+      display: inline-block;
+      max-width: 220px;
+      margin-bottom: 30px;
+      .fa {
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        padding: 13px;
+        font-size: 16px;
+        border-radius: 2px;
+        background-color: white;
+      }
+      h3 {
+        margin-bottom: 20px;
+        padding: 13px 0;
+        font: 15px $Montserrat;
+        text-align: left;
+        color: white;
+      }
+      p {
+        font: 400 13px $Open_Sans;
+        text-align: left;
+        color: white;
+      }
+    }
+  }
+}
+
+.portfolio {
+  background-color: $main-color;
+  .container {
+    padding: 60px 0 50px 0;
+  }
+  .portfolio-menu {
+    margin-bottom: 30px;
+    li {
+      display: inline-block;
+      margin: 7px;
+      h4 {
+        padding: 15px 40px;
+        font: 600 14px $Open_Sans;
+        color: white;
+        border: 2px solid #d11f2d;
+      }
+      @include transition(all, .3s, ease);
+      &:hover, &.active {
+        background-color: #d11f2d;
+        cursor: pointer;
+      }
+    }
+  }
+  .portfolio-list {
+    font-size: 0;
+    line-height: 0;
+    .mix {
+      display: none;
+    }
+    li {
+      height: 220px;
+      width: 326px;
+      position: relative;
+      display: inline-block;
+      &:hover .rollover{
+        opacity: 1;
+      }
+    }
+  }
+  .rollover {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    @include transition(all, .5s, ease);
+
+    h5 {
+      margin-top: 90px;
+      font: 14px $Montserrat;
+    }
+    span {
+      font: 400 10px $Open_Sans;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 25px;
+      right: 25px;
+      bottom: 25px;
+      left: 25px;
+      border: 1px solid white;
+    }
+  }
+}
+
+.team {
+  .container {
+    padding: 60px 20px 50px 20px;
+  }
+  .section-name {
+    color: $main-color;
+  }
+  p {
+    margin-bottom: 20px;
+    font: 300 20px $Open_Sans;
+  }
+  .team-list {
+    font-size: 0;
+    li {
+      margin: 10px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      height: 351px;
+      width: 263px;
+      &:hover .rollover {
+        opacity: 1;
+      }
+    }
+    .add-teammate {
+      display: inline-block;
+      height: 347px;
+      width: 259px;
+      border: 2px solid $main-color;
+      background-color: white;
+      span {
+        display: block;
+        margin-top: 100px;
+        font: 400 23px $Open_Sans;
+      }
+      a {
+        display: inline-block;
+        margin-top: 70px;
+        padding: 15px 50px;
+        font: 700 23px $Open_Sans;
+        color: $main-color;
+        border: 3px solid $main-color;
+        @include transition(all, .3s, ease);
+        &:hover {
+          color: white;
+          background: $main-color;
+        }
+      }
+    }
+    .rollover {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      @include transition(all, .3s, ease);
+      h5, span {
+        margin-top: 260px;
+      }
+      h5 {
+        font: 400 23px $Open_Sans;
+      }
+      span {
+        font: 400 18px $Open_Sans;
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+.clients {
+  background-color: #f4f4f4;
+  .container {
+    padding: 60px 20px 50px 20px;
+  }
+  .section-name {
+    color: $main-color;
+  }
+  .clients-list {
+    li {
+      display: inline-block;
+      margin: 50px;
+    }
+  }
+}
+
+.contact-us {
+  background-color: #d11f2d;
+  .container {
+    max-width: 920px;
+    padding: 150px 20px;
+    color: white;
+  }
+  .contact-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 25px 50px;
+    font: 700 24px $Open_Sans;
+    color: #252525;
+    border-radius: 4px;
+    background-color: white;
+    @include transition(all, .5s, ease);
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 700px;
+    .container {
+      span {
+        bottom: 60px;
+      }
+      h2 {
+        margin-top: 150px;
+        font-size: 40px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .about {
+    p {
+      margin-bottom: 60px;
+      width: 450px;
+      font: 400 16px "Open Sans", "Arial", sans-serif;
+      text-align: left;
+    }
+    .about-list {
+      margin: 0;
+      text-align: left;
+      li {
+        margin: 0;
+        .fa {
+          float: left;
+          margin: 0 25px 0 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .services .services-list li {
+      margin: 0 20px 50px;
+  }
+  .portfolio .container {
+    padding-bottom: 0;
+    max-width: 1305px;
+  }
+  .clients .container {
+    max-width: 1305px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 900px;
+    .container {
+      h2 {
+        margin-top: 280px;
+      }
+    }
+  }
+  .introduction, .about, .services, .team, .clients {
+    .container {
+      padding: 100px 20px;
+    }
+  }
+  .portfolio {
+    .container {
+      padding: 100px 0px;
+    }
+  }
+  .about {
+    background: url("../images/ipad.png") bottom right no-repeat #222;
+  }
+}
