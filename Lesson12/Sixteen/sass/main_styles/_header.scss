@@ -1,0 +1,113 @@
+$main-color: #acd373;
+$second-color: #f7f7f7;
+
+$main-font: 'Source Sans Pro', sans-serif;
+
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  color: white;
+  background-color: #acd373;
+  box-shadow: 2.5px 4.3px 5px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  .container {
+    position: relative;
+    overflow: visible;
+    padding: 0;
+  }
+  .logo {
+    font: 400 45px 'Thirsty', sans-serif;
+    color: $second-color;
+    text-shadow: 1.5px 2.6px 0 rgba(0, 0, 0, 0.25);
+  }
+  .main-nav {
+    & > span {
+      display: none;
+    }
+  }
+  h1 {
+    position: absolute;
+    top: 5px;
+    left: 20px;
+    a {
+      font: 900 18px/25px $main-font;
+      color: $second-color;
+    }
+  }
+  .main-nav {
+    position: absolute;
+    top: 29px;
+    right: 10px;
+    li {
+      float: left;
+      font-size: 0;
+    }
+    a {
+      display: block;
+      margin: 0 15px;
+      font: 900 18px/25px $main-font;
+      color: $second-color;
+      text-transform: uppercase;
+      &:hover {
+        border-bottom: 3px solid $second-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    .main-nav {
+      width: 100%;
+      top: 80px;
+      right: auto;
+      &:before {
+        content: '\2630';
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: -54px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      ul {
+        width: 100%;
+
+        background-color: $main-color;
+        li {
+          float: none;
+        }
+      }
+      a {
+        margin: 0;
+        padding: 12px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        text-transform: uppercase;
+        @include transition(all, .3s, ease);
+
+        &:hover {
+          border: none;
+          border-top: 1px solid rgba(255,255,255,0.1);
+          text-shadow: 1.8px 2px 0 rgba(0,0,0,0.2);
+          background-color: #9EC467;
+        }
+      }
+    }
+    .main-nav ul {
+      display: none;
+    }
+    .main-nav.open ul {
+      display: block;
+      opacity: 1;
+    }
+  }
+}

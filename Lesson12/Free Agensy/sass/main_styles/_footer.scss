@@ -1,0 +1,14 @@
+footer {
+  background-color: #515151;
+  .container {
+    padding: 20px;
+    color: #cecece;
+    font: 400 14px / 27px 'OpenSans', sans-serif;
+    a {
+      color: #cecece;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

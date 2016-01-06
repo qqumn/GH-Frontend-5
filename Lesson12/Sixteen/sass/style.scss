@@ -1,0 +1,64 @@
+@import "grids";
+@import "compass/reset";
+
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@import "main_styles/header";
+@import "main_styles/content";
+@import "main_styles/footer";
+
+$main-color: #acd373;
+$light-color: #f7f7f7;
+$dark-color: #454545;
+
+$main-font: 'Source Sans Pro', sans-serif;
+$DroidSerif: 'Droid Serif', serif;
+
+
+.container {
+  @include container();
+  padding: 50px 20px;
+  overflow: hidden;
+  text-align: center;
+  font-family: $main-font;
+  .section-title {
+    font: 400 30px $main-font;
+    text-transform: uppercase;
+  }
+  .section-description {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font: 400 18px $DroidSerif;
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: -20px;
+      left: 50%;
+      width: 124px;
+      height: 1px;
+      margin-left: -62px;
+      background-color: $dark-color;
+    }
+    &:after {
+      position: absolute;
+      content: "●";
+      bottom: -19px;
+      right: 50%;
+      margin-right: -6px;
+      font-size: 20px;
+      line-height: 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 70px 20px;
+  }
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}

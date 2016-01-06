@@ -1,0 +1,473 @@
+.hero {
+  position: relative;
+  padding: 0;
+  background: url('../images/hero-bg.png') top center no-repeat;
+  background-size: cover;
+  .container {
+    padding-bottom: 100px;
+  }
+  .welcome-message{
+    margin-top: 250px;
+    text-align: center;
+    color: white;
+    font: 300 20px 'HelveticaNeue', sans-serif;
+
+    .bold {
+      display: block;
+      font-size: 38px;
+      font-weight: 700;
+    }
+  }
+
+  .hero-button {
+    display: inline-block;
+    margin-top: 70px;
+    padding: 20px 40px;
+    color: white;
+    font: 700 18px 'HelveticaNeue', sans-serif;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #f8cd53;
+    text-transform: uppercase;
+    @include transition(all, .3s, ease);
+    &:hover {
+      background-color: darken(#f8cd53, 15%);
+    }
+  }
+}
+
+.about {
+  background-color: white;
+  .features {
+    margin: 40px auto 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 30px;
+      max-width: 250px;
+      text-align: center;
+
+      img {
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        margin-bottom: 10px;
+        color: #424242;
+        font: 700 22px 'HelveticaNeue', sans-serif;
+      }
+      p {
+        color: #5c5c5c;
+        font:400 14px / 22px 'OpenSans', sans-serif;
+      }
+    }
+  }
+}
+
+.approch {
+  background-color: #f3f3f3;
+  .container {
+    max-width: 1020px;
+  }
+}
+.approches-list {
+  margin-top: 40px;
+  li {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-height: 244px;
+    margin: 20px 0;
+    padding: 10px 0 30px;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #e2e2e2;
+    background-color: white;
+    h4 {
+      margin: 20px 0 10px;
+      font: 18px / 26px 'HelveticaNeue-Bold', sans-serif;
+      color: $second-color;
+    }
+    p {
+      padding: 0 20px;
+      font: 400 14px / 22px 'OpenSans', sans-serif;
+      color: #5c5c5c;
+    }
+    .step-number {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .approches-list li {
+    padding: 0;
+    .step-number {
+      display: block;
+    }
+    &:nth-child(odd) {
+      padding-left: 30px;
+      img {
+        float: right;
+        margin-left: 90px;
+      }
+      h4, p {
+        text-align: right;
+      }
+      .step-number {
+        position: absolute;
+        top: 65px;
+        right: 300px;
+      }
+    }
+    &:nth-child(even){
+      padding-right: 30px;
+      img {
+        float: left;
+        margin-right: 90px;
+      }
+      .step-number {
+        position: absolute;
+        top: 65px;
+        left: 300px;
+      }
+      h4, p {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .approch .container {
+    padding: 70px 0;
+  }
+  .approches-list li {
+    margin: 30px 0;
+    h4 {
+      margin-top: 65px;
+    }
+  }
+}
+
+.work {
+  background: $main-color;
+  .container {
+    .section-title {
+      color: white;
+    }
+    & > p:first-of-type {
+      color: white;
+      &:after {
+        border-bottom: 4px solid white;
+      }
+    }
+  }
+}
+.works-list {
+  margin-top: 50px;
+  font-size: 0;
+  li {
+    display: inline-block;
+    min-height: 500px;
+    margin: 10px;
+    background-color: #f35e59;
+    img {
+      height: 250px;
+      width: 250px;
+    }
+  }
+}
+.item-info {
+  height: 250px;
+  width: 250px;
+  color: white;
+  .fa {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-family: FontAwesome;
+    opacity: .5;
+  }
+  h3 {
+    font: 26px 'HelveticaNeue-Bold', sans-serif;
+  }
+  span {
+    font: 16px 'HelveticaNeue-Bold', sans-serif;
+  }
+}
+
+@media (min-width: 768px) {
+  .works-list {
+    li {
+      margin: 0;
+      min-height: 250px;
+      min-width: 500px;
+      //подскажите, пожалуйста, правильную формулу
+      //чтобы можно было обойтись без этих куч нн-ых элементов
+      &:nth-child(4n+1),&:nth-child(4n+2) {
+        img {
+          float: right;
+        }
+        .item-info {
+          float: left;
+        }
+      }
+      &:nth-child(4n+3),&:nth-child(4n+4) {
+        img {
+          float: left;
+        }
+        .item-info {
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+.analysis {
+  min-height: 750px;
+  background-color: #1287bf;
+  .container {
+    overflow: visible;
+    padding: 50px 0;
+    .section-title {
+      color: white;
+    }
+    & > p:first-of-type {
+      margin-bottom: 20px;
+      color: white;
+      &:after {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .popbox {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .collapse {
+    position:relative;
+  }
+
+  .open {
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+    color: white;
+    border: 3px solid white;
+    border-radius: 100%;
+    @include transition(all, .3s, ease);
+    &:hover {
+      opacity: 0.8;
+    }
+    .fa {
+      line-height: 64px;
+      text-align: center;
+    }
+  }
+
+  .box {
+    display: none;
+    padding: 50px 20px;
+    position: absolute;
+    background: white;
+    border: 1px solid white;
+    border-radius: 2px;
+  }
+
+  .arrow {
+    position:absolute;
+    width: 0;
+    height: 0;
+    top:-30px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid white;
+    z-index: 100;
+  }
+
+  .contact-form {
+    position: relative;
+    max-width: 680px;
+    margin: 0 auto;
+      p {
+        margin-bottom: 30px;
+        font: 400 15px/22px 'HelveticaNeue', sans-serif;
+      }
+      input[type="text"] {
+        display: block;
+        margin-left: 15%;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        width: 420px;
+        height: 50px;
+        font: 400 14px / 40px 'OpenSans', sans-serif;
+        color: #000;
+        border: 1px solid #d8d8d8;
+        border-radius: 3px 2px 2px 3px;
+      }
+
+    .submit {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font: 700 15px 'HelveticaNeue', sans-serif;
+      color: white;
+      background-color: $main-color;
+      border: none;
+      border-radius: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      @include transition(all, .3s, ease);
+      &:hover {
+        background-color: darken($main-color, 15%);
+      }
+    }
+  }
+  .close {
+    position: absolute;
+    display: block;
+    top: -25px;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    font: 32px/44px 'HelveticaNeue-Light', sans-serif;
+    color: white;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 100%;
+    background-color: $main-color;
+    @include transition(all, .3s, ease);
+    &:hover {
+      background-color: darken($main-color, 15%);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .analysis {
+    min-height: 690px;
+    .open, .arrow, .close {
+      display: none;
+    }
+    .box {
+      display: block;
+      width: 400px !important;
+      //не знаю как без него обойтись.
+      //Нужно переписывать js и добавлять условие на проверку ширины экрана,
+      //но знаний еще не достаточно
+      padding: 30px 0;
+    }
+    .contact-form {
+      input[type="text"]{
+        margin-left: 10px;
+        width: 355px;
+        height: 35px;
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .analysis {
+    .box {
+      width: 300px !important;
+    }
+    .contact-form {
+      input[type="text"]{
+        margin-left: 10px;
+        width: 260px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+.footer-contact {
+  background-color: #2a2a2a;
+  .container{
+    padding: 70px 0;
+    max-width: 680px;
+    .section-title {
+      color: white;
+    }
+    & > p:first-of-type {
+      margin-bottom: 20px;
+      font: 400 14px / 22px 'OpenSans', sans-serif;
+      color: #cecece;
+      &:after {
+        border: none;
+      }
+    }
+  }
+  .soc-links{
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font: 700 29px/22px 'HelveticaNeue', sans-serif;
+  }
+
+  .soc-links {
+    margin: 10px auto;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 5px;
+      a {
+        display: block;
+        width: 49px;
+        height: 49px;
+        border: 2px solid #515151;
+        border-radius: 5px;
+        @include transition(all, .3s, ease);
+        .fa {
+          font-size: 23px;
+          color: #fff;
+          line-height: 49px;
+          text-align: center;
+        }
+        &:hover {
+          border-color: $main-color;
+        }
+      }
+    }
+  }
+  .footer-contact-form {
+    .footer-email {
+      display: inline-block;
+      width: 90%;
+      height: 54px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: #cecece;
+      font: 400 14px / 22px 'OpenSans', sans-serif;
+      background-color: #515151;
+      border-radius: 1px;
+      border: 2px solid transparent;
+      @include transition(all, .3s, ease);
+      &:focus {
+        outline: none;
+        border: 2px solid #8B8B8B;
+      }
+    }
+    .footer-submit {
+      margin-top: 20px;
+      padding: 20px 35px;
+      font: 700 17px / 22px 'OpenSans', sans-serif;
+      color: #fff;
+      border: 2px solid #515151;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      cursor: pointer;
+      @include transition(all, .3s, ease);
+      &:hover {
+        border-color: $main-color;
+      }
+    }
+  }
+}

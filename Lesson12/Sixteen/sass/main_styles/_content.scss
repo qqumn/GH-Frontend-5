@@ -1,0 +1,703 @@
+$main-color: #acd373;
+$light-color: #f7f7f7;
+$dark-color: #454545;
+
+$main-font: 'Source Sans Pro', sans-serif;
+$DroidSerif: 'Droid Serif', serif;
+
+
+.hero {
+  background: url('../images/hero-bg.png') bottom repeat-x #9ABD67;
+  min-height: 400px;
+  .container {
+    padding-top: 180px;
+    color: $light-color;
+  }
+  .hero-title {
+    font: 900 30px $main-font;
+    text-transform: uppercase;
+  }
+  .location-info {
+    display: block;
+    font: 20px $DroidSerif;
+    font-style: italic;
+  }
+  .scroll-button {
+    display: inline-block;
+    margin-top: 60px;
+    @include transition(all, .3s, ease);
+
+    &:hover {
+      opacity: .8;
+    }
+    .fa {
+      font-size: 40px;
+      color: $light-color;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 500px;
+    .hero-title {
+      margin-bottom: 10px;
+      font-size: 38px;
+    }
+    .location-info {
+      font-size: 24px;
+    }
+    .scroll-button {
+      .fa {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 700px;
+    .hero-title {
+      margin-top: 50px;
+      font-size: 48px;
+    }
+    .scroll-button {
+      margin-top: 100px;
+      .fa {
+        font-size: 70px;
+      }
+    }
+  }
+}
+
+.about {
+  .container {
+    color: $dark-color;
+    text-align: left;
+  }
+  .about-title {
+    position: relative;
+    margin-left: 70px;
+    margin-bottom: 40px;
+    font: 400 30px $main-font;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      top: -10px;
+      left: -66px;
+      height: 55px;
+      width: 47px;
+      background: url("../images/about-icon.png") center no-repeat;
+    }
+  }
+  p {
+    max-width: 768px;
+    margin-bottom: 20px;
+    font: 400 18px $main-font;
+  }
+  .about-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 15px 20px;
+    font: 18px $DroidSerif;
+    font-style: italic;
+    color: $main-color;
+    border: 1px solid $main-color;
+    @include transition(all, .3s, ease);
+
+    &:hover {
+      color: $light-color;
+      background-color: $main-color;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    .container {
+      background: url("../images/iphone.png") 93% center no-repeat;
+    }
+  }
+}
+
+.video {
+  height: 300px;
+  background: url("../images/video.png") center no-repeat;
+  background-size: cover;
+  .play-button {
+    margin-top: 40px;
+    @include transition(all, .3s, ease);
+
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .video {
+    height: 400px;
+    .play-button {
+      margin-top: 90px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .video {
+    height: 520px;
+    .play-button {
+      margin-top: 150px;
+    }
+  }
+}
+
+.marked-text {
+  color: $main-color;
+}
+
+.services {
+  .services-list {
+    li {
+      display: inline-block;
+      margin: 20px;
+      text-align: left;
+      img {
+        float: left;
+      }
+      h3, p {
+        max-width: 280px;
+        margin-left: 90px;
+      }
+    }
+    h3 {
+      font: 700 20px $main-font;
+      color: $main-color;
+      text-transform: uppercase;
+    }
+  }
+  .services-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 15px 20px;
+    font: 18px $DroidSerif;
+    font-style: italic;
+    color: $main-color;
+    border: 1px solid $main-color;
+    @include transition(all, .3s, ease);
+    &:hover {
+      color: $light-color;
+      background-color: $main-color;
+    }
+  }
+}
+
+.team {
+  background-color: $main-color;
+  .container {
+    color: $light-color;
+    & > p:first-of-type {
+      &:before {
+        background-color: $light-color;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .team {
+    .container {
+      padding: 70px 0;
+    }
+  }
+}
+
+.team-list {
+  margin-top: 70px;
+  & > li {
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    margin: 60px 10px 40px;
+    border-radius: 5px;
+    background-color: $light-color;
+
+    img {
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      margin-left: -80px;
+      border: 5px solid $main-color;
+      border-radius: 100%;
+      @include transition(all, .5s, ease);
+      &:hover {
+        top: -90px;
+      }
+    }
+
+    h3 {
+      margin: 100px 0 10px;
+      color: $main-color;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    h4 {
+      margin-bottom: 20px;
+      font: 16px $DroidSerif;
+      color: #787878;
+      font-style: italic;
+    }
+  }
+}
+
+.social-links {
+  padding: 15px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #ebebeb;
+  & > li {
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      margin: 0 5px;
+      width: 28px;
+      height: 28px;
+      border-radius: 100%;
+      background: #525252;
+      @include transition(all, .3s, ease);
+
+      &:hover {
+        background-color: $main-color;
+        .fa {
+          text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        }
+      }
+      .fa {
+        text-align: center;
+        line-height: 28px;
+        color: #ebebeb;
+      }
+    }
+  }
+}
+
+.join {
+  background-color: #9abd67;
+  .container {
+    padding: 35px 0;
+    color: $light-color;
+  }
+  span {
+    margin: 0 30px;
+    font: 400 18px $main-font;
+  }
+  .join-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 15px 20px;
+    font: 18px $DroidSerif;
+    font-style: italic;
+    color: $light-color;
+    border: 1px solid $light-color;
+    @include transition(all, .3s, ease);
+
+    &:hover {
+      color: #9abd67;
+      background-color: $light-color;
+    }
+  }
+}
+
+.works {
+  .works-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 5px 20px;
+    font: 18px $DroidSerif;
+    font-style: italic;
+    color: $main-color;
+    border: 1px solid $main-color;
+    @include transition(all, .3s, ease);
+
+    &:hover {
+      color: $light-color;
+      background-color: $main-color;
+    }
+  }
+}
+.works-list {
+  margin: 0 auto;
+  text-align: center;
+  .container {
+    padding: 50px 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 10px;
+    max-width: 352px;
+    background-color: #ebebeb;
+    &:nth-child(1), &:nth-child(2) {
+      max-width: 540px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: $dark-color;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    span {
+      display: block;
+      margin: 5px 0 25px;
+      font: 16px $DroidSerif;
+      color: #787878;
+      font-style: italic;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.client-block {
+  background-color: #ebebeb;
+  .container {
+    padding: 20px;
+  }
+  .clients-logo {
+    li {
+      display: inline-block;
+      margin: 20px;
+    }
+  }
+}
+
+.testimonials {
+  background: url("../images/testimonials-bg.png") center no-repeat;
+  background-size: cover;
+  .container {
+    padding: 70px 20px;
+    color: $light-color;
+  }
+}
+.info-block {
+  display: inline-block;
+  max-width: 600px;
+  margin-bottom: 50px;
+  text-align: center;
+  h2 {
+    font: 400 30px $main-font;
+  }
+  p {
+    margin-top: 20px;
+    font: 400 18px $main-font;
+  }
+  .testimonials-button {
+    display: inline-block;
+    margin-top: 50px;
+    padding: 5px 20px;
+    font: 18px $DroidSerif;
+    font-style: italic;
+    color: $main-color;
+    border: 1px solid $main-color;
+    @include transition(all, .3s, ease);
+
+    &:hover {
+      color: $light-color;
+      background-color: $main-color;
+    }
+  }
+}
+.reviews-list {
+  li {
+    display: inline-block;
+    max-width: 375px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  q {
+    position: relative;
+    display: block;
+    padding: 20px 10px 40px;
+    font: 400 16px $DroidSerif;
+    text-align: left;
+    border: 1px solid $light-color;
+    &:after {
+      content: "”";
+      position: absolute;
+      right: 20px;
+      bottom: 10px;
+      font: 400 60px $DroidSerif;
+      line-height: 0;
+      opacity: 0.4;
+    }
+    &:before {
+      content: "◥";
+      position: absolute;
+      left: -4px;
+      bottom: -31px;
+      font-size: 30px;
+    }
+  }
+  img {
+    float: left;
+    margin: 40px 20px 20px 0;
+    border-radius: 100%;
+  }
+  h3 {
+    margin-top: 60px;
+    font: 700 18px $main-font;
+    color: $main-color;
+    text-align: left;
+  }
+  a {
+    display: block;
+    margin-top: 5px;
+    font: 18px $DroidSerif;
+    color: $light-color;
+    font-style: italic;
+    text-align: left;
+    opacity: 0.85;
+  }
+}
+
+@media (min-width: 1124px) {
+  .info-block {
+    float: left;
+    max-width: 300px;
+    text-align: left;
+  }
+  .reviews-list {
+    float: right;
+  }
+}
+
+.blog {
+  background-color: $light-color;
+}
+.articles-list {
+  li {
+    position: relative;
+    display: inline-block;
+    max-width: 260px;
+    margin: 10px;
+    background-color: #ebebeb;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .article-icon {
+      position: absolute;
+      top: 36%;
+      left: 50%;
+      width: 36px;
+      height: 36px;
+      margin-left: -28px;
+      padding: 8px;
+      border: 5px solid #ebebeb;
+      border-radius: 100%;
+      background-color: $main-color;
+    }
+
+    h3 {
+      margin-top: 50px;
+      min-height: 70px;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #454545;
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 50px;
+      font: 14px / 50px $DroidSerif;
+      color: #f7f7f7;
+      font-style: italic;
+      background-color: $main-color;
+      @include transition(all, .3s, ease);
+
+      &:hover {
+        background-color: #90B25E;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.mail-delivery {
+  font-size: 0;
+  background-color: $main-color;
+  .container {
+    padding: 40px 20px;
+  }
+  h3 {
+    font: 400 18px $main-font;
+    color: $light-color;
+  }
+  .delivery-form, h3 {
+    display: inline-block;
+    margin: 5px 20px;
+  }
+  .email {
+    padding: 15px 20px;
+    font: 14px $DroidSerif;
+    color: $light-color;
+    border: 1px solid $light-color;
+    background-color: $main-color;
+    &:focus {
+      outline: none;
+      background-color: #B5D883;
+    }
+  }
+
+  .submit {
+    padding: 19px;
+    height: 48px;
+    width: 50px;
+    background: url("../images/submit-icon.png") center no-repeat $light-color;
+    border: none;
+    @include transition(all, .3s, ease);
+
+    &:focus, &:hover {
+      outline: none;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+}
+
+::-webkit-input-placeholder  {
+  color: #f7f7f7;
+  font-size: 14px;
+  font-style: italic;
+}
+::-moz-placeholder {
+  color: #f7f7f7;
+  font-size: 14px;
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  color: #f7f7f7;
+  font-size: 14px;
+  font-style: italic;
+}
+::-webkit-input-placeholder {
+  color: #f7f7f7;
+  font-size: 14px;
+  font-style: italic;
+}
+::-moz-placeholder {
+  color: #f7f7f7;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.map {
+  height: 300px;
+  background: url("../images/map.jpg") center no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  .map {
+    height: 500px;
+  }
+}
+
+.contact {
+  background-color: $main-color;
+  .container {
+    max-width: 570px;
+    padding: 50px 0 50px;
+  }
+  .section-title {
+    position: relative;
+    margin-bottom: 40px;
+    color: $light-color;
+    &:before {
+      position: absolute;
+      content: "";
+      bottom: -15px;
+      left: 50%;
+      width: 124px;
+      height: 1px;
+      margin-left: -62px;
+      background-color: $light-color;
+    }
+    &:after {
+      position: absolute;
+      content: "●";
+      bottom: -14px;
+      right: 50%;
+      margin-right: -6px;
+      font-size: 20px;
+      line-height: 0;
+    }
+  }
+  .contact-form {
+    text-align: left;
+  }
+  label {
+    display: block;
+    margin: 30px 0 10px 3px;
+    font: 400 18px/24px $main-font;
+    color: $light-color;
+    text-align: left;
+  }
+  .name, .email, .message {
+    width: 90%;
+    padding: 10px 20px;
+    border: none;
+    font: 14px $DroidSerif;
+    color: $light-color;
+    background-color: #9abd67;
+    &:focus {
+      outline: none;
+    }
+  }
+  .message {
+    min-height: 100px;
+    resize: vertical;
+  }
+  .form-submit {
+    float: right;
+    padding: 20px 35px;
+    margin-top: 40px;
+    margin-right: 17px;
+    font: 18px $DroidSerif;
+    font-style: italic;
+    line-height: 0;
+    color: $light-color;
+    border: none;
+    background-color: #9abd67;
+    @include transition(all, .3s, ease);
+
+    &:focus, &:hover {
+      outline: none;
+      background-color: #90B25E;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact {
+    .container {
+      padding: 70px 0;
+    }
+  }
+}
