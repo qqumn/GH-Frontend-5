@@ -1,0 +1,80 @@
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+footer {
+  .container {
+    position: relative;
+    max-width: 958px;
+    padding: 30px 20px 10px;
+    border: 1px solid #1f1f1f;
+    text-align: center;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 19px;
+      width: 100%;
+      background: url("../images/content-before.png") center repeat-x;
+    }
+  }
+  .logo, .copyright-info, .up-button {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: middle;
+
+  }
+  .copyright-info {
+    position: relative;
+    max-width: 450px;
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    &:before, &:after {
+      position: absolute;
+      content: "";
+      height: 83px;
+      width: 2px;
+      background: url("../images/before-after-copyright.png") center no-repeat;
+    }
+    &:before {
+      top: -26px;
+      left: -13px;
+    }
+    &:after {
+      top: -26px;
+      right: -13px;
+    }
+    a {
+      color: white;
+    }
+    .rules {
+      display: block;
+      margin-top: 5px;
+      font-size: 11px;
+    }
+    .author {
+      position: absolute;
+      bottom: -21px;
+      right: 0;
+      font: 15px 'MyriadProBoldCondensed';
+      color: #484848;
+    }
+  }
+  .up-button {
+    @include transition(all, .3s, ease);
+    &:hover {
+      opacity: 0.7;
+    }
+    img {
+      display: block;
+    }
+    font: 11px 'MyriadProBoldCondensed';
+    color: #494949;
+  }
+}

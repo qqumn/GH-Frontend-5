@@ -1,0 +1,31 @@
+// Screen
+// ======
+
+@import "grids";
+@import "compass/reset";
+
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@import "main_styles/header";
+@import "main_styles/content";
+@import "main_styles/footer";
+
+body {
+  font: 400 11px 'Arial';
+  background: linear-gradient(to top, #020202 0%, #020202 47%, #2d2d2d 99%, #2d2d2d 100%);
+}
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  @include container();
+  text-align: center;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
