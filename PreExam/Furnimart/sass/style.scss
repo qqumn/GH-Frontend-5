@@ -1,0 +1,44 @@
+// Screen
+// ======
+
+@import "grids";
+@import "compass/reset";
+
+@import "../bower_components/font-awesome/scss/font-awesome";
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600);
+
+@import "main_styles/header";
+@import "main_styles/content";
+@import "main_styles/footer";
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  @include container();
+  //overflow: hidden;
+  text-align: center;
+}
+.section-title {
+  position: relative;
+  margin: 10px 0 25px;
+  font-family: 'Raleway';
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50px;
+  color: #373737;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -10px;
+    left: 50%;
+    width: 1000px;
+    height: 2px;
+    margin-left: -500px;
+    background: url("../images/after-title-img.png");
+  }
+}

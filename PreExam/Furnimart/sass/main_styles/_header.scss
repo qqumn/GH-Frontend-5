@@ -1,0 +1,120 @@
+$blue-color: #2797d5;
+$green-color: #6aad44;
+$red-color: #c4275f;
+
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+
+  color: white;
+
+  background-color: white;
+  z-index: 1000;
+  .container {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1100px;
+
+    text-align: left;
+
+    z-index: 10;
+  }
+  .main-menu {
+    position: relative;
+    & > span {
+      display: none;
+    }
+  }
+  h1 {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+  .main-nav {
+    position: absolute;
+    right: 0;
+    li {
+      float: left;
+
+      font-size: 0;
+    }
+    a {
+      display: block;
+      margin: 0 10px;
+      padding: 28px 0;
+
+      font: 400 20px 'Raleway', sans-serif;
+      color: black;
+
+      &:hover {
+        padding-top: 26px;
+
+        color: $red-color;
+
+        border-top: 2px solid $blue-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    .container {
+      width: 100%;
+    }
+    .main-nav {
+      width: 100%;
+      top: 70px;
+      &:before {
+        content: '\2630';
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: -47px;
+
+        font-size: 24px;
+        line-height: 40px;
+        color: #373737;
+
+        cursor: pointer;
+      }
+        ul {
+          width: 100%;
+
+          background-color: rgba(255, 255, 255, 1);
+          li {
+            float: none;
+          }
+        }
+      a {
+        margin: 0;
+        padding-left: 10px;
+
+        border-top: 1px solid rgba(255,255,255,0.6);
+        &:hover {
+          //padding: 16px 16px 16px 8px;
+
+          border-top: 1px solid rgba(255, 255, 255, 0.6);
+          border-left: 2px solid $blue-color;
+
+        }
+      }
+  }
+    .main-nav ul {
+      display: none;
+    }
+    .main-nav.open ul {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
