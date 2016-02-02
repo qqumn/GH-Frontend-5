@@ -1,0 +1,459 @@
+@mixin transition($property, $duration, $timing) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+.hero {
+  background: #ececec;
+  .container {
+    height: 610px;
+    background: url('../images/hero-bg.png') center no-repeat;
+    background-size: cover;
+  }
+  .logo {
+    display: block;
+    margin: 175px auto 30px;
+  }
+
+  .hero-title {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 34px;
+    font-style: italic;
+    line-height: 40px;
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 870px) {
+  .hero {
+    .hero-title {
+      max-width: 680px;
+      font-size: 44px;
+      line-height: 60px;
+    }
+  }
+}
+
+.about {
+  background-color: #ececec;
+}
+
+.about-list {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  li {
+    flex-basis: 300px;
+    margin-bottom: 40px;
+  }
+  h3 {
+    margin-bottom: 20px;
+    font: 700 20px/28px 'Raleway';
+    color: #333;
+    text-transform: uppercase;
+  }
+  p {
+    font: 400 14px/28px 'Lato';
+    color: #6e6e6e;
+  }
+  .hexagon {
+    width: 136px;
+    height: 158px;
+    background: url("../images/hexagon.png") center no-repeat;
+  }
+  .fa {
+    display: block;
+    margin: 20px auto 20px;
+    font-size: 52px;
+    color: white;
+    line-height: 155px;
+  }
+}
+
+@media (min-width: 940px) {
+  .about-list {
+    li {
+      &:nth-child(2),
+      &:nth-child(3n+2) {
+        display: flex;
+        flex-direction: column;
+        span {
+          order: 1;
+        }
+        h3 {
+          order: 2;
+        }
+        p {
+          order: 3;
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  position: relative;
+}
+
+.projects-slider {
+  left: 50%;
+  height: 880px;
+  width: 606px;
+  margin-top: 40px;
+  transform: translateX(-50%);
+  li {
+    img {
+      max-width: 100%;
+    }
+    .img-title {
+      margin-bottom: 20px;
+      font: 700 20px/28px 'Raleway';
+      color: #333;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 0 auto 10px;
+      max-width: 600px;
+      font: 400 16px/28px 'Lato';
+      color: #6e6e6e;
+    }
+    .link-button {
+      padding: 10px 20px;
+      font: 400 12px/18px 'Lato';
+      color: #009aff;
+      background: url("../images/read-more-bg.png") center no-repeat;
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
+}
+
+#slide-tracker {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  li {
+    display: inline-block;
+    margin: 5px;
+    height: 12px;
+    width: 12px;
+    border-radius: 8px;
+    background-color: #dfdfdf;
+    cursor: pointer;
+    @include transition(all, .3s, ease);
+    &:hover {
+      background-color: rgba(0, 155, 255, 0.5);
+    }
+    &.active {
+      background-color: #009bff;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-slider {
+    left: 50%;
+    height: 970px;
+    width: 470px;
+    li p {
+      max-width: 425px;
+    }
+  }
+}
+
+@media (min-width: 1140px) {
+  .projects-slider {
+    left: 50%;
+    height: 541px;
+    width: 1106px;
+    text-align: left;
+    li {
+      img {
+        float: right;
+      }
+      .img-title {
+        margin-top: 95px;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      .img-title, p, .link-button {
+        float: left;
+      }
+    }
+  }
+}
+
+.services {
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #ffffff 0%, #ececec 100%);
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ececec 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #ececec 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ececec', GradientType=0);
+  .container {
+    padding: 50px 0;
+    height: 580px;
+    background: url("../images/services-bg.png") center no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+  }
+  .section-title {
+    margin-top: 70px;
+    color: white;
+  }
+}
+
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  li {
+    flex-basis: 160px;
+    span {
+      display: block;
+      color: white;
+    }
+  }
+  .hexagon {
+    margin: 20px auto;
+    width: 103px;
+    height: 118px;
+    background: url("../images/hexagon.png") center no-repeat;
+    background-size: contain;
+  }
+  .fa {
+    font-size: 43px;
+    line-height: 124px;
+  }
+  .fa-mobile {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 640px) {
+  .services {
+    .container {
+      height: 470px;
+    }
+  }
+  .services-list {
+    margin-top: 20px;
+    li {
+      &:nth-child(1), &:nth-child(4n+1), &:nth-child(4), &:nth-child(4n+4) {
+        transform: translateY(-50px);
+      }
+    }
+  }
+}
+
+.blog {
+  background-color: #ececec;
+  .container {
+    padding: 50px 0;
+  }
+}
+
+.blogs-list {
+  margin: 50px auto 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  li {
+    position: relative;
+    width: 270px;
+    margin: 6px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    h3 {
+      margin: 30px 0 20px 15px;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: left;
+      color: #000;
+    }
+
+    p {
+      width: 240px;
+      margin: 15px 15px 50px;
+      font-size: 16px;
+      font-weight: 400;
+      color: dimgrey;
+      text-align: left;
+      line-height: 30px;
+    }
+  }
+}
+
+.social-actions {
+  position: absolute;
+  bottom: 4px;
+  width: 270px;
+  text-align: center;
+  border-top: 1px solid #d9d9d9;
+  li {
+    display: inline-block;
+    width: auto;
+    &:first-child {
+      float: left;
+      margin-left: 15px;
+    }
+    &:last-child {
+      float: right;
+      margin-right: 17px;
+    }
+    a {
+      color: #595858;
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}
+
+@media (min-width: 1138px) {
+  .blogs-list > li {
+    &:nth-child(1), &:nth-child(4n+1),
+    &:nth-child(4), &:nth-child(4n+4) {
+      transform: translateY(-50px);
+    }
+  }
+}
+
+.offers-list {
+  margin: 0 auto;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    max-width: 300px;
+    margin: 20px auto;
+    width: 100%;
+    background-color: #fc0;
+    &.selected {
+      background-color: #009bff;
+      transform: translateY(26px);
+      h3 {
+        margin-top: 30px;
+      }
+    }
+
+    h3 {
+      margin: 47px auto 0;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 72px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  .singup-button {
+    display: block;
+    width: 168px;
+    margin: 38px auto 36px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 45px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #000;
+    background-color: #000;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.price-header {
+  position: relative;
+
+  .currency-symbol {
+    position: absolute;
+    top: -6px;
+    left: 25%;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 72px;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  .price {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 72px;
+    color: #000;
+    text-transform: uppercase;
+  }
+
+  .term {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 72px;
+    color: #000;
+  }
+}
+
+.features-list {
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid #abdeff;
+
+  li {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    a {
+      color: #000;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 72px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.selected {
+  margin: 20px auto;
+  background-color: #009bff;
+  box-shadow: 0 0 7.5px 0.5px rgba(0, 0, 0, 0.23);
+
+  h3 {
+    margin-top: 0;
+  }
+  .fa {
+    width: 30px;
+    height: 30px;
+    margin: 31px auto 0;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #fff;
+    border-radius: 100%;
+  }
+
+  .features-list {
+    li {
+      background-color: #009bff;
+    }
+  }
+}
