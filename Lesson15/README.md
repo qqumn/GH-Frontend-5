@@ -1,7 +1,7 @@
 Lesson 15
 =========
 
-#Links to gh-pages:
+**Links to gh-pages:**
 
 Template Skewed: http://qqumn.github.io/GH-Frontend-5/Lesson15/Skewed/
 
