@@ -39,7 +39,7 @@ var parallaxImg = $(".parallax-bg");
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
-    if (scroll >= positionBlock - 400) {
+    if (scroll >= positionBlock - 600) {
         parallaxImg.css("display", "block");
     } else {
         parallaxImg.css("display", "none");
@@ -92,7 +92,7 @@ function commaSeparateNumber(val){
 
 //animation counter
 var parentPos = Math.round($('.achievements').offset().top);
-alert(parentPos);
+//alert(parentPos);
 $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     console.log(scroll + " parent: " + parentPos);
