@@ -1,0 +1,23 @@
+footer {
+  background-color: #222;
+  .container {
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 380px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .copyright {
+    display: inline-block;
+    margin-top: 50px;
+    font: 16px/20px 'ambleregular', sans-serif;
+    color: #e4e4e4;
+    a {
+      font-family: 'amblebold', sans-serif;
+      color: #d87843;
+    }
+  }
+}

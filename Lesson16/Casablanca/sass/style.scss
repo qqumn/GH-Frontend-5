@@ -1,0 +1,56 @@
+// Screen
+// ======
+
+@import "grids";
+@import "compass/reset";
+
+
+@import "main_styles/header";
+@import "main_styles/content";
+@import "main_styles/footer";
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300);  // like Avenir
+
+.container {
+  @include container();
+  padding: 40px 20px;
+  text-align: center;
+  overflow: hidden;
+  .section-name {
+    position: relative;
+    margin-bottom: 40px;
+    color: #222;
+    font-family: 'BigJohn',sans-serif;
+    font-size: 30px;
+    line-height: 60px;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -30px;
+      height: 2px;
+      width: 60px;
+      background-color: black;
+    }
+  }
+  p {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'amblelight', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #222;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 80px 20px;
+  }
+}

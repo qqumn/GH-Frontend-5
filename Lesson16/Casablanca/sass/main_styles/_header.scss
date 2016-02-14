@@ -1,0 +1,89 @@
+@mixin transition($property, $duration, $timing){
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+header {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 100;
+  background-color: rgb(204, 92, 66);
+  .container {
+    overflow: visible;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+  }
+  span {
+    float: left;
+    margin-top: 11px;
+    margin-right: 10px;
+
+    color: #fff;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+.main-nav {
+  float: left;
+  margin-top: 20px;
+  margin-left: 50px;
+  &:before {
+    content: '\2630';
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    line-height: 40px;
+    cursor: pointer;
+  }
+  ul {
+    li {
+      display: inline-block;
+      margin: 0 20px;
+      font: 14px 'HelveticaNeue-Bold', sans-serif;
+    }
+  }
+}
+.main-nav ul {
+  display: none;
+}
+.main-nav.open ul {
+  display: block;
+}
+
+@media (max-width: 768px){
+  .main-nav{
+    width: 100%;
+    margin-left: 0;
+    ul {
+      margin-top: 40px;
+      background-color: rgba(204, 92, 66, 0.91);
+      li {
+        display: block;
+        margin: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        line-height: 55px;
+        a {
+          @include transition(all, .3s, ease);
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+        &:last-child {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+}
